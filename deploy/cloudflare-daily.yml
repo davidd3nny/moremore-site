@@ -1,0 +1,24 @@
+# Для сайта на Cloudflare Pages (после переезда с GitHub Pages).
+# Cloudflare сам собирает сайт после каждой правки. Этот робот только раз в сутки, в 00:05 по Баку,
+# просит Cloudflare пересобрать сайт, чтобы прошедшие события ушли с афиши, а новые появились.
+#
+# Как включить:
+#   1. В Cloudflare: проект → Settings → Builds → Add deploy hook (имя daily, ветка main) → скопируйте ссылку.
+#   2. В GitHub: Settings → Secrets and variables → Actions → New repository secret,
+#      имя CF_DEPLOY_HOOK, значение = эта ссылка.
+#   3. Перенесите этот файл в папку .github/workflows/ и удалите оттуда deploy.yml (публикацию на GitHub Pages).
+name: Ежедневная пересборка
+
+on:
+  schedule:
+    - cron: "5 20 * * *"   # 20:05 UTC = 00:05 в Баку
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Попросить Cloudflare пересобрать сайт
+        run: curl -fsS -X POST "$HOOK" > /dev/null
+        env:
+          HOOK: ${{ secrets.CF_DEPLOY_HOOK }}

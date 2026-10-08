@@ -5,10 +5,14 @@
 Берёт содержимое из content/ (меню, данные заведения, афиша), шаблон src/page.html и стили src/style.css,
 шрифты и логотип из assets/, картинки афиши из afisha/. Готовый сайт кладёт в dist/.
 
-Запуск на компьютере:  python3 build.py        (нужны Python 3.11+ и Pillow: pip3 install pillow)
+Запуск на компьютере:  python3 build.py        (Python 3.9+ и пакеты: pip3 install --user pillow tomli)
 На GitHub то же самое делает робот (Actions) после каждой правки и раз в сутки, в начале дня по Баку.
 """
-import base64, datetime, html, json, pathlib, re, shutil, sys, tomllib, urllib.parse
+import base64, datetime, html, json, pathlib, re, shutil, sys, urllib.parse
+try:
+    import tomllib                    # Python 3.11 и новее
+except ModuleNotFoundError:           # системный Python 3.9 на Mac: pip3 install --user tomli pillow
+    import tomli as tomllib
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DIST = ROOT / "dist"
