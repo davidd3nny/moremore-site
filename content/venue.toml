@@ -1,0 +1,31 @@
+# Данные заведения More&More. Меняйте только значения справа от знака «=», кавычки оставляйте.
+# Тексты на трёх языках пишутся через « | »: AZ | RU | EN.
+
+name = "More&More"
+
+# true: на сайте метка «Концепт · черновик», поисковики его не видят.
+# Когда сайт станет настоящим (на moremore.az), поставьте false.
+draft = true
+
+phone = "+994104150007"            # для звонка, без пробелов
+phone_show = "+994 10 415 00 07"   # как показывать на сайте
+whatsapp = "994104150007"          # номер WhatsApp для брони: только цифры, без «+»
+
+address = "Port Baku Walk, Üzeyir Hacıbəyli 74 | Port Baku Walk, ул. Узеира Гаджибейли, 74 | Port Baku Walk, 74 Uzeyir Hajibeyli St"
+coords = "40°22′44″ N · 49°51′43″ E"
+map = "https://www.google.com/maps/search/?api=1&query=More%20%26%20More%20Baku&query_place_id=ChIJu0rC7Kt9MEARo2ejuwBnZyQ"
+instagram = "https://www.instagram.com/more.more.baku/"
+tiktok = "https://www.tiktok.com/@more.more.baku"
+
+# Откуда взято меню (ссылка в подвале, пока сайт черновик)
+menu_source = "https://monyo.az/?r=more.more"
+
+# Часы работы, время Баку. Если закрываются после полуночи, так и пишите: "04:00".
+[hours]
+mon = ["12:00", "00:00"]
+tue = ["12:00", "00:00"]
+wed = ["12:00", "00:00"]
+thu = ["12:00", "00:00"]
+fri = ["12:00", "04:00"]
+sat = ["12:00", "04:00"]
+sun = ["12:00", "00:00"]

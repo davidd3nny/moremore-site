@@ -1,0 +1,487 @@
+# Меню More&More: кухня и бар.
+# Строка блюда: ["Название AZ | Название RU | Name EN", цена]
+# Цена: число (15) или текст в кавычках ("16 / 14", "1100*").
+# Порядок строк = порядок на сайте. После правки нажмите «Commit changes»: сайт пересоберётся сам за 1–2 минуты.
+
+[[kitchen]]
+id = "sets"
+title = "Setlər | Сеты | Sets"
+
+  [[kitchen.sets]]
+  name = "Business Lunch · Toyuq seti | Бизнес-ланч · Куриный сет | Business lunch · Chicken set"
+  price = 25
+  about = "Toyuq tabakası, toyuq şorbası, tərəvəzli toyuq salatı, limonad | Цыплёнок табака, куриный суп, куриный салат с овощами, лимонад | Chicken tabaka, chicken soup, chicken salad with vegetables, lemonade"
+
+  [[kitchen.sets]]
+  name = "Business Lunch · Ət seti | Бизнес-ланч · Мясной сет | Business lunch · Meat set"
+  price = 30
+  about = "Bulqur ilə ət lokumu, Asiya sayağı mal əti salatı, mərci şorbası, limonad | Мясной локум с булгуром, салат с говядиной по-азиатски, чечевичный суп, лимонад | Meat lokum with bulgur, Asian-style beef salad, lentil soup, lemonade"
+
+  [[kitchen.sets]]
+  name = "Business Lunch · Balıq seti | Бизнес-ланч · Рыбный сет | Business lunch · Fish set"
+  price = 35
+  about = "Tərəvəzli forel, tomat şorbası, «Popkorn» salatı, limonad | Форель с овощами, томатный суп, салат «Попкорн», лимонад | Trout with vegetables, tomato soup, “Popcorn” salad, lemonade"
+
+  [[kitchen.sets]]
+  name = "Səhər yeməyi seti | Завтрак-сет | Breakfast set"
+  price = 50
+  about = "Soyuq qəlyanaltılar, təzə tərəvəz, pendir və kəsmik seçimi, yaşıl və qara zeytun, mövsümi meyvə; bal, xama, mürəbbələr, kərə yağı, qatılaşdırılmış süd. Yumurta yeməyi və sıyıq seçiminizə, üstəlik pancake, sırnık, fransız tostu və çay | Холодные закуски, свежие овощи, сыры и творог, зелёные и чёрные оливки, сезонные фрукты; мёд, сметана, варенья, масло, сгущёнка. Блюдо из яиц и каша на выбор, а ещё панкейки, сырники, французский тост и чай | Cold starters, fresh vegetables, cheese and cottage cheese, green and black olives, seasonal fruit; honey, sour cream, jams, butter, condensed milk. An egg dish and a porridge of your choice, plus pancakes, syrniki, French toast and tea"
+
+  [[kitchen.sets]]
+  name = "More&More xüsusi seti | Фирменный сет More&More | More&More signature set"
+  price = 160
+  about = "Saşimi: qızıl balıq, tuna, krevet, ilan balığı. Hand roll: qızıl balıq, yengəc, tuna. Saşimi roll qızıl balıq və trüfel pendiri ilə, yengəc əti ilə tuna, hisə verilmiş ilan balığı və tempura krevet | Сашими: лосось, тунец, креветка, угорь. Хэнд-ролл: лосось, краб, тунец. Сашими-ролл с лососем и трюфельным сыром, тунец с крабовым мясом, копчёный угорь и креветка темпура | Sashimi: salmon, tuna, shrimp, eel. Hand roll: salmon, crab, tuna. Sashimi roll with salmon and truffle cheese, tuna with crab meat, smoked eel and tempura shrimp"
+
+[[kitchen]]
+id = "rolls"
+title = "Rollar və saşimi | Роллы и сашими | Rolls & sashimi"
+items = [
+  ["Acılı qızılbalıq xırtıldayan düyü ilə roll | Острый ролл с лососем на хрустящем рисе | Spicy salmon roll on crispy rice", 15],
+  ["Ahtapotlu roll | Ролл с осьминогом | Octopus roll", 18],
+  ["Roll tempura krevetlər | Ролл с креветками темпура | Tempura shrimp roll", 18],
+  ["Tempura qızıl balıq roll | Ролл темпура с лососем | Tempura salmon roll", 19],
+  ["Krevet və qızıl balıq tartarı ilə roll | Ролл с креветкой и тартаром из лосося | Shrimp and salmon tartare roll", 22],
+  ["Tempura tuna roll | Ролл темпура с тунцом | Tempura tuna roll", 23],
+  ["Roll tempura ilan balığı | Ролл темпура с угрём | Tempura eel roll", 27],
+  ["Tempura krevet, avokado və sitrus sousu ilə roll | Ролл с креветкой темпура, авокадо и цитрусовым соусом | Tempura shrimp, avocado and citrus sauce roll", 28],
+  ["Norveç qızıl balığı və trüfel pendiri ilə roll | Ролл с норвежским лососем и трюфельным сыром | Norwegian salmon and truffle cheese roll", 28],
+  ["Saşimi roll tuna və yengəc əti ilə | Сашими-ролл с тунцом и крабовым мясом | Sashimi roll with tuna and crab meat", 30],
+  ["Tempura dəniz darağı roll | Ролл темпура с гребешком | Tempura scallop roll", 32],
+  ["Alovda qızıl balıq kamçatka yengəci ilə roll | Опалённый ролл с лососем и камчатским крабом | Flame-seared salmon roll with Kamchatka crab", 38],
+  ["Saşimi roll hisə verilmiş ilan balığı və trüfel sousu ilə | Сашими-ролл с копчёным угрём и трюфельным соусом | Sashimi roll with smoked eel and truffle sauce", 39],
+]
+
+[[kitchen]]
+id = "caviar"
+title = "Xəzər sahillərindən kürü | Икра с берегов Каспия | Caviar from the Caspian shores"
+# Икра: sizes = [[граммы, цена], ...]
+
+  [[kitchen.caviar]]
+  name = "Qırmızı kürü | Красная икра | Red caviar"
+  sizes = [[50, 58]]
+
+  [[kitchen.caviar]]
+  name = "Nərə kürüsü | Осетровая икра | Sturgeon caviar"
+  sizes = [[30, 200], [50, 400], [100, 550]]
+
+  [[kitchen.caviar]]
+  name = "Beluqa kürüsü | Икра белуги | Beluga caviar"
+  sizes = [[30, 250], [50, 500], [100, 900]]
+
+[[kitchen]]
+id = "ice"
+title = "Buzlaq | На льду | On ice"
+note = "qiymət 100 q üçün | цена за 100 г | price per 100 g"
+footnote = "* Kamçatka krabı: bütöv | * Камчатский краб: целиком | * Kamchatka crab: whole"
+items = [
+  ["Alabalıq | Форель | Trout", 9],
+  ["Qara midyə | Чёрные мидии | Black mussels", 10],
+  ["Vonqol | Вонголе | Vongole clams", 18],
+  ["Norveç qızıl balığı | Норвежский лосось | Norwegian salmon", 21],
+  ["Beluqa | Белуга | Beluga", 27],
+  ["Tam krevetlər | Целые креветки | Whole shrimp", 27],
+  ["Lobster | Лобстер | Lobster", 50],
+  ["Kamçatka krabı | Камчатский краб | Kamchatka crab", "1100*"],
+]
+
+[[kitchen]]
+id = "north"
+title = "Şimal balığı | Северная рыба | Northern fish"
+items = [
+  ["Stroqanina alabalıq | Строганина из форели | Trout stroganina", 15],
+  ["Qızıl balığdan stroqanina | Строганина из лосося | Salmon stroganina", 18],
+  ["Stroqanina beluqa | Строганина из белуги | Beluga stroganina", 29],
+]
+
+[[kitchen]]
+id = "crab"
+title = "Xərçəng | Краб | Crab"
+items = [
+  ["Olivye yengəc ilə | Оливье с крабом | Olivier salad with crab", 18],
+  ["Kutab yengəc, straçatella və reyhan ilə | Кутаб с крабом, страчателлой и базиликом | Qutab with crab, stracciatella and basil", 22],
+  ["Əridilmiş kərə yağı ilə xərçəngkimilər falanqası | Фаланги краба с топлёным маслом | Crab legs with melted butter", 60],
+]
+
+[[kitchen]]
+id = "starters"
+title = "Qəlyanaltılar | Закуски | Starters"
+items = [
+  ["Xırtıldayan krevetlər hisə verilmiş ayoli ilə | Хрустящие креветки с копчёным айоли | Crispy shrimp with smoked aioli", 15],
+  ["Az duzlu siyənək balığı hisə verilmiş kartof ilə | Малосольная сельдь с копчёным картофелем | Lightly salted herring with smoked potatoes", 16],
+  ["Straçatella və pomidorlu brusketta | Брускетта со страчателлой и томатами | Bruschetta with stracciatella and tomatoes", 18],
+  ["Qızıl inci krevetlər | Креветки «Золотая жемчужина» | Golden pearl shrimp", 22],
+  ["Vitello tonnato kimçi dana əti və tuna sousu ilə | Вителло тоннато: телятина кимчи и соус из тунца | Vitello tonnato with kimchi veal and tuna sauce", 24],
+  ["Tuna balığından tartar paltus kürüsü ilə | Тартар из тунца с икрой палтуса | Tuna tartare with halibut roe", 24],
+  ["Qızıl balığdan tartar qırmızı kürü ilə | Тартар из лосося с красной икрой | Salmon tartare with red caviar", 26],
+  ["Mərmər mal ətindən tartar | Тартар из мраморной говядины | Marbled beef tartare", 26],
+  ["Portağal və yabanı laym ilə marinad edilmiş levrək | Лаврак, маринованный с апельсином и диким лаймом | Sea bass marinated with orange and wild lime", 28],
+  ["Sarımsaqlı kərə yağı ilə pələng krevetləri | Тигровые креветки с чесночным маслом | Tiger prawns with garlic butter", 28],
+  ["Brusketta dana əti və bişmiş bibərdən sousu ilə | Брускетта с телятиной и соусом из печёного перца | Bruschetta with veal and roasted pepper sauce", 32],
+  ["Brusketta hisə verilmiş alabalıq və straçatella ilə | Брускетта с копчёной форелью и страчателлой | Bruschetta with smoked trout and stracciatella", 32],
+  ["Pendir assortisi | Сырное ассорти | Cheese selection", 35],
+  ["Ətirli ədviyyatlarla sobada bişirilmiş kral krevetləri | Королевские креветки, запечённые с ароматными специями | King prawns baked with fragrant spices", 48],
+]
+
+[[kitchen]]
+id = "meze"
+title = "Meze | Мезе | Meze"
+items = [
+  ["Assorti meze fəsəli ilə | Ассорти мезе с фесели | Meze platter with feseli bread", 55],
+  ["Badımcan kürüsü | Баклажанная икра | Aubergine caviar", 6],
+  ["Qril zeytunları | Оливки гриль | Grilled olives", 6],
+  ["Marinə edilmiş xiyarlar | Маринованные огурцы | Pickled cucumbers", 6],
+  ["Kimçi çerri pomidoru | Черри-кимчи | Cherry tomato kimchi", 6],
+  ["Yoqurt və kəsmik dipi | Дип из йогурта и творога | Yoghurt and cottage cheese dip", 6],
+  ["Hummus | Хумус | Hummus", 9],
+  ["Babaqanuş | Бабагануш | Baba ghanoush", 9],
+]
+
+[[kitchen]]
+id = "salads"
+title = "Salatlar | Салаты | Salads"
+items = [
+  ["Mimoza hisə verilmiş alabalıq tartarı ilə | «Мимоза» с тартаром из копчёной форели | Mimosa salad with smoked trout tartare", 22],
+  ["Yunan salatı feta pendiri ilə | Греческий салат с фетой | Greek salad with feta", 22],
+  ["Pomidor və çiyələk ilə burrata | Буррата с томатами и клубникой | Burrata with tomatoes and strawberries", 22],
+  ["Xırtıldayan popkorn krevetli salat | Салат с хрустящими креветками попкорн | Crispy popcorn shrimp salad", 22],
+  ["Mal əti ilə Asiya salatı | Азиатский салат с говядиной | Asian beef salad", 24],
+  ["Dəniz məhsulları ilə salat | Салат с морепродуктами | Seafood salad", 26],
+  ["Şirin pomidorlar hisə verilmiş ilan balığı və straçatella ilə | Сладкие томаты с копчёным угрём и страчателлой | Sweet tomatoes with smoked eel and stracciatella", 26],
+  ["Rukkola, pələng kreveti və hisə verilmiş ilan balığı salatı | Салат с рукколой, тигровой креветкой и копчёным угрём | Rocket, tiger prawn and smoked eel salad", 34],
+  ["Kamçatka yengəci krevetlər və limon sousu ilə | Камчатский краб с креветками и лимонным соусом | Kamchatka crab with shrimp and lemon sauce", 38],
+]
+
+[[kitchen]]
+id = "soups"
+title = "Sup | Супы | Soups"
+items = [
+  ["Sudak və beluqadan uxa | Уха из судака и белуги | Ukha with zander and beluga", 25],
+  ["Balıq solyankası | Рыбная солянка | Fish solyanka", 27],
+  ["Tom Yam dəniz məhsulları ilə | Том ям с морепродуктами | Tom yum with seafood", 34],
+]
+
+[[kitchen]]
+id = "chef"
+title = "Aşpazın xüsusi təklifi | Предложение шефа | Chef’s specials"
+items = [
+  ["Müəllif sousu ilə krab burger | Краб-бургер с авторским соусом | Crab burger with the chef’s sauce", 18],
+  ["Quattro Formaggi | Кватро формаджи | Quattro formaggi", 18],
+  ["Mantı krevetlər və yengəc ilə | Манты с креветками и крабом | Manti with shrimp and crab", 20],
+  ["Krispi burger tuna, pendir və çimiçurri sousu ilə | Криспи-бургер с тунцом, сыром и чимичурри | Crispy tuna burger with cheese and chimichurri", 28],
+  ["Grand şaurma dəniz məhsulları ilə | Гранд-шаурма с морепродуктами | Grand shawarma with seafood", 32],
+  ["Pizza dəniz məhsulları ilə | Пицца с морепродуктами | Seafood pizza", 36],
+  ["Lahmacun qızıl balıq ilə | Лахмаджун с лососем | Lahmacun with salmon", 42],
+]
+
+[[kitchen]]
+id = "fish"
+title = "Dəniz məhsulları və balıq | Рыба и морепродукты | Fish & seafood"
+items = [
+  ["Ağ və ya qırmızı şərab sousunda midiyalar | Мидии в соусе из белого или красного вина | Mussels in white or red wine sauce", "16 / 14"],
+  ["Qızardılmış sudak romesko sousu və Bakı pomidorları ilə | Жареный судак с соусом ромеско и бакинскими помидорами | Pan-fried zander with romesco sauce and Baku tomatoes", 20],
+  ["Dorado kök püresi və bern nuazet sousu ilə | Дорадо с морковным пюре и соусом бёр-нуазет | Dorado with carrot purée and beurre noisette", 28],
+  ["Fişteks kartof mussu ilə | Фиш-стейк с картофельным муссом | Fish steak with potato mousse", 30],
+  ["Beluqa steyk krevetlər, ispanaq və miso yağı ilə | Стейк из белуги с креветками, шпинатом и мисо-маслом | Beluga steak with shrimp, spinach and miso butter", 35],
+  ["Sobada bişmiş dorado kapers və zeytun ilə | Запечённая дорадо с каперсами и оливками | Baked dorado with capers and olives", 45],
+  ["Nərə balığından sırdaq | Сырдак из осетрины | Sturgeon sırdaq", 48],
+  ["Vonqole sousunda sibas | Сибас в соусе вонголе | Sea bass in vongole sauce", 49],
+  ["Kiyev üsulu levrək sobada bişmiş kartof və turşəng pesto ilə | Лаврак по-киевски с печёным картофелем и песто из щавеля | Kyiv-style sea bass with baked potatoes and sorrel pesto", 49],
+  ["Pomidor və qırmızı şərab sousunda bişirilmiş ahtapot | Осьминог в соусе из томатов и красного вина | Octopus braised in tomato and red wine sauce", 90],
+]
+
+[[kitchen]]
+id = "pasta"
+title = "Makaron və rizotto | Паста и ризотто | Pasta & risotto"
+items = [
+  ["Krevetli funçoza | Фунчоза с креветками | Glass noodles with shrimp", 20],
+  ["Ravioli alabalıq, krevetlər və ispanaq ilə | Равиоли с форелью, креветками и шпинатом | Ravioli with trout, shrimp and spinach", 24],
+  ["Rizotto straçatella və sobada bişmiş pomidor | Ризотто со страчателлой и печёными томатами | Risotto with stracciatella and roasted tomatoes", 24],
+  ["Dəniz məhsulları ilə casarecce | Казаречче с морепродуктами | Casarecce with seafood", 25],
+  ["Rizotto şampan langustinlər ilə | Ризотто с шампанским и лангустинами | Champagne risotto with langoustines", 25],
+  ["Pasta krevetlər və parmezan ilə bisk sousunda | Паста с креветками и пармезаном в соусе биск | Pasta with shrimp and parmesan in bisque sauce", 25],
+  ["Riqatoni bişmiş mal yanaqları, parmezan ilə napoli sousunda | Ригатони с томлёными говяжьими щёчками и пармезаном в соусе наполи | Rigatoni with braised beef cheeks and parmesan in Napoli sauce", 26],
+  ["Pasta qızılbalıq və iki növ kürü ilə | Паста с лососем и двумя видами икры | Pasta with salmon and two kinds of caviar", 27],
+  ["Dəniz məhsulları ilə linqvini | Лингвини с морепродуктами | Linguine with seafood", 28],
+  ["Fettuccine Alfredo | Феттуччине Альфредо | Fettuccine Alfredo", 28],
+  ["Tomat sousunda yengəc ilə pasta | Паста с крабом в томатном соусе | Crab pasta in tomato sauce", 28],
+  ["Şampan sousunda qara rizotto ilə lobster | Лобстер с чёрным ризотто в соусе из шампанского | Lobster with black risotto in champagne sauce", 250],
+]
+
+[[kitchen]]
+id = "steaks"
+title = "Steyk və ət | Стейки и мясо | Steaks & meat"
+items = [
+  ["İspanaqlı göbələk sousu ilə tenderloin | Тендерлойн с грибным соусом и шпинатом | Tenderloin with mushroom and spinach sauce", 75],
+  ["Mərmər mal ətindən ribeye | Рибай из мраморной говядины | Marbled beef ribeye", 120],
+  ["Dallas steyki | Стейк Даллас | Dallas steak", 130],
+  ["Bişmiş mal yanaqları trüfel püresi ilə | Томлёные говяжьи щёчки с трюфельным пюре | Braised beef cheeks with truffle mash", 26],
+  ["Mal əti kartof və trüfel sousu ilə | Говядина с картофелем и трюфельным соусом | Beef with potatoes and truffle sauce", 30],
+  ["Dana ətindən rulet | Рулет из телятины | Veal roulade", 32],
+]
+
+[[kitchen]]
+id = "sides"
+title = "Qarnirlər | Гарниры | Sides"
+items = [
+  ["Kartof püresi | Картофельное пюре | Mashed potatoes", 5],
+  ["Yasəmən düyüsü | Жасминовый рис | Jasmine rice", 7],
+  ["Kartof fri parmezan ilə | Картофель фри с пармезаном | Fries with parmesan", 8],
+  ["Sobada bişmiş mini-kartof | Запечённый мини-картофель | Roasted baby potatoes", 8],
+  ["Brokoli | Брокколи | Broccoli", 9],
+  ["Düyü tərəvəz ilə | Рис с овощами | Rice with vegetables", 10],
+  ["Miks izqara tərəvəzlər | Овощи гриль | Grilled vegetables", 12],
+  ["Qulançar | Спаржа | Asparagus", 14],
+]
+
+[[kitchen]]
+id = "kids"
+title = "Uşaq menyusu | Детское меню | Kids’ menu"
+items = [
+  ["Kartof püresi ilə toyuq kotletləri | Куриные котлеты с картофельным пюре | Chicken patties with mashed potatoes", 12],
+  ["Parmezanlı şirin kartof fri | Батат фри с пармезаном | Sweet potato fries with parmesan", 12],
+  ["Toyuq küftələri və reyhan ilə tomat souslu pasta | Паста в томатном соусе с куриными фрикадельками и базиликом | Tomato pasta with chicken meatballs and basil", 15],
+  ["Küftəli qaymaqlı pasta | Сливочная паста с фрикадельками | Creamy pasta with meatballs", 15],
+  ["Toyuqlu burger | Бургер с курицей | Chicken burger", 16],
+  ["Mal əti ilə burger | Бургер с говядиной | Beef burger", 20],
+  ["Qara qarağat mürəbbəsi və xama ilə sırnıklər | Сырники со сметаной и вареньем из чёрной смородины | Syrniki with sour cream and blackcurrant jam", 22],
+  ["Brokoli və xamalı tartar sousu ilə qızılbalıq şişləri | Шашлычки из лосося с брокколи и соусом тартар | Salmon skewers with broccoli and tartar sauce", 25],
+]
+
+[[kitchen]]
+id = "desserts"
+title = "Desertlər | Десерты | Desserts"
+items = [
+  ["Assorti dondurma | Ассорти мороженого | Ice cream selection", 5],
+  ["Toffi pudinq | Тоффи-пудинг | Toffee pudding", 17],
+  ["Xama bal tortu | Медовик со сметанным кремом | Sour cream honey cake", 18],
+  ["Romlu baba | Ромовая баба | Rum baba", 18],
+  ["Kruiz kolleksiyası | «Круизная коллекция» | The Cruise Collection", 20],
+  ["Tiramisu püstə kremi və təzə moruq ilə | Тирамису с фисташковым кремом и свежей малиной | Tiramisu with pistachio cream and fresh raspberries", 20],
+  ["Şokoladlı trüfel | Шоколадный трюфель | Chocolate truffle", 20],
+  ["Qızılı Roşe | «Золотой Роше» | Golden Rocher", 20],
+  ["Milfey | Мильфей | Mille-feuille", 25],
+  ["Assorti mövsüm meyvələri | Ассорти сезонных фруктов | Seasonal fruit platter", "65 / 95"],
+]
+
+# ---------------- Бар ----------------
+[bar]
+# Авторские коктейли: [название, состав, цена, цвет напитка в бокале]
+signature = [
+  ["Riviera Bloom", "Gin, peach-jasmine cordial, lemon, prosecco", 22, "#F4C9AD"],
+  ["Mediterranean Sun", "Tequila, melon-lemongrass cordial, lemon, grapefruit soda", 24, "#EEDC9E"],
+  ["Sunset Spritz", "Aperol, grapefruit-rosemary cordial, prosecco", 22, "#F2AE93"],
+  ["Salty Peach", "Whiskey, peach-honey cordial, lemon, ginger ale", 24, "#E8BC86"],
+  ["Coastal Breeze", "Gin, feijoa-basil cordial, lemon, soda", 18, "#C9DDB1"],
+  ["Ocean Mist", "Gin, grapefruit-cucumber cordial, lemon", 18, "#CFE5DB"],
+  ["Caspian Vine", "Gin, grape-tarragon cordial, lemon, tonic", 22, "#DCE3B5"],
+  ["Sea Garden", "Rum, Martini Fiero, grape-cucumber cordial, lemon, tonic", 23, "#EDBDB0"],
+]
+# Классические: [название, состав, цена]
+classic = [
+  ["Negroni", "Gin, Campari, rosso", 22],
+  ["Espresso Martini", "Vodka, Kahlúa, espresso, syrup", 20],
+  ["Pornstar Martini", "Vodka, Passoa, passion fruit, lemon, prosecco", 23],
+  ["Aperol Spritz", "Aperol, soda, prosecco", 22],
+  ["Hugo", "Prosecco, mint, jasmine and elderflower syrup, lemon", 16],
+  ["French 75", "Gin, tonic", 21],
+  ["Cosmopolitan", "Vodka, orange liqueur, lemon, juice", 18],
+  ["Bellini", "Prosecco, peach purée", 15],
+  ["Long Island Iced Tea", "Vodka, tequila, rum, orange liqueur, gin, lemon, syrup, cola", 22],
+  ["Long Island Energy", "Vodka, tequila, rum, orange liqueur, gin, lemon, syrup, energy", 28],
+  ["Margarita", "Tequila, orange liqueur, lemon", 21],
+  ["White Russian", "Vodka, Kahlúa, cream", 20],
+  ["Mojito", "Rum, lime, mint, syrup, soda", 20],
+  ["Mojito Energy", "Rum, lime, mint, energy", 22],
+  ["Cuba Libre", "Rum, cola", 16],
+  ["Mai Tai", "White rum, gold rum, orange liqueur, syrup, lemon", 21],
+  ["Old Fashioned", "Bourbon, sugar, Angostura", 20],
+  ["Piña Colada", "Rum, coconut, pineapple, cream", 18],
+  ["Tequila Sunrise", "Tequila, orange juice, grenadine", 19],
+  ["Whiskey Sour", "Bourbon, lemon, syrup", 21],
+]
+noalc = [
+  ["Mojito N/A", 17],
+  ["Siren’s Kiss Martini", 16],
+  ["Mango Maracuja Lemonade", 12],
+  ["Strawberry Raspberry Lemonade", 12],
+  ["Mojito N/A Energy", 19],
+  ["Piña Colada N/A", 16],
+]
+lemonade = [
+  ["Mango · Passion fruit · Vanilla", "8 / 22"],
+  ["Lemongrass · Coconut", "8 / 22"],
+  ["Lychee · Rose", "10 / 25"],
+]
+coffee = [
+  ["Espresso", 5],
+  ["Double espresso", 7],
+  ["Americano", 7],
+  ["Cappuccino", 8],
+  ["Flat white", 8],
+  ["Latte", 8],
+  ["Raf", 10],
+  ["Matcha latte", 12],
+  ["Glacé", 12],
+]
+tea = [
+  ["Feijoa · Rosemary", 14],
+  ["Orange · Passion fruit · Sumac", 14],
+  ["English Breakfast", 10],
+  ["Black Lankaran", 10],
+  ["Earl Grey", 10],
+  ["Sencha", 10],
+  ["Jasmine", 10],
+  ["Milk Oolong", 14],
+  ["Chamomile", 14],
+  ["Rooibos", 14],
+  ["Ginger Honey", 16],
+]
+soft = [
+  ["Fresh: kök · alma · portağal · qreypfrut | Фреш: морковь · яблоко · апельсин · грейпфрут | Fresh: carrot · apple · orange · grapefruit", "10–12"],
+  ["Fresh: ananas | Фреш: ананас | Fresh: pineapple", 20],
+  ["Şirələr | Соки | Juices", 10],
+  ["İstisu 250 ml", 6],
+  ["Acqua Panna 250 / 750 ml", "10 / 15"],
+  ["San Pellegrino 250 / 750 ml", "10 / 15"],
+  ["Badamlı 0.33 / 0.75 l", "6 / 10"],
+  ["Coca-Cola · Sprite · Fanta", 7],
+  ["Red Bull", "11–12"],
+  ["Xırdalan · Efes Zero", 10],
+  ["Corona Extra", 15],
+]
+hookah = [
+  ["Classic", 60],
+  ["Grapefruit", 70],
+  ["Pineapple", 80],
+  ["Ocean Breeze", 90],
+  ["Citrus Burst", 100],
+  ["Sweet Dream", 110],
+]
+# Крепкие: [название, цена бутылки, цена порции]; если порций нет, только два значения
+
+[[bar.spirits]]
+group = "Aperitif / Vermouth"
+items = [
+  ["Campari 1 l", 240, 13],
+  ["Aperol 1 l", 230, 13],
+  ["Martini Rosso / Extra Dry / Bianco 1 l", 160, 10],
+  ["Martini Fiero 1 l", 180, 11],
+]
+
+[[bar.spirits]]
+group = "Vodka"
+items = [
+  ["Absolut 1 l", 200, 15],
+  ["Belvedere 0.7 l", 280, 17],
+  ["Skyy 0.7 l", 180, 12],
+  ["Grey Goose 0.7 l", 360, 24],
+  ["Finlandia 1 l", 220, 16],
+  ["Beluga Export 0.7 l", 380, 27],
+  ["Beluga Gold Line 0.7 l", 800, 50],
+]
+
+[[bar.spirits]]
+group = "Gin"
+items = [
+  ["Bombay Sapphire 1 l", 230, 17],
+  ["Tanqueray Ten 0.7 l", 250, 19],
+  ["Beefeater 1 l", 250, 16],
+  ["Gordon’s 1 l", 220, 14],
+  ["Bickens London Dry 1 l", 190, 11],
+  ["Hendrick’s 1 l", 450, 25],
+  ["Tanqueray Export 0.7 l", 200, 16],
+]
+
+[[bar.spirits]]
+group = "Tequila"
+items = [
+  ["Jose Cuervo Silver / Gold 1 l", 280, 15],
+  ["Espolon Blanco 0.75 l", 280, 15],
+  ["Olmeca Silver / Gold 1 l", 280, 16],
+  ["Patrón Silver 0.7 l", 450, 30],
+  ["Patrón Añejo 0.7 l", 600, 40],
+  ["Don Julio Blanco 0.7 l", 480, 30],
+  ["Don Julio Reposado 0.7 l", 600, 38],
+  ["Don Julio Añejo 0.7 l", 700, 45],
+  ["Don Julio 1942 0.7 l", 1750],
+]
+
+[[bar.spirits]]
+group = "Rum"
+items = [
+  ["Captain Morgan Gold 1 l", 230, 15],
+  ["Rivière du Mât Black Spiced 0.7 l", 190, 14],
+  ["Bacardí White / Gold / Black 1 l", 250, 16],
+  ["Zacapa 23 0.7 l", 570, 40],
+  ["Zacapa XO 0.7 l", 1000, 65],
+]
+
+[[bar.spirits]]
+group = "Whisky"
+items = [
+  ["Jameson 1 l", 300, 17],
+  ["Bushmills Original 0.7 l", 200, 16],
+  ["Tullamore D.E.W. 1 l", 250, 16],
+  ["Jack Daniel’s Old No. 7 / Honey 1 l", 360, 20],
+  ["Jack Daniel’s Apple 0.7 l", 250, 20],
+  ["Wild Turkey 81 0.7 l", 250, 16],
+  ["Bulleit Rye 0.7 l", 280, 22],
+  ["Jim Beam 1 l", 280, 16],
+  ["Johnnie Walker Red Label 1 l", 280, 18],
+  ["Johnnie Walker Black Label 1 l", 360, 20],
+  ["Johnnie Walker Gold Label 0.75 l", 550, 38],
+  ["Johnnie Walker Blue Label 0.75 l", 1800, 125],
+  ["Chivas Regal 12 0.7 l", 300, 22],
+  ["Chivas Regal 18 0.7 l", 500, 38],
+  ["Royal Salute 0.7 l", 900, 70],
+  ["Monkey Shoulder", 300, 22],
+  ["Glenmorangie 10 0.7 l", 350, 26],
+  ["Glenfiddich 12 1 l", 520, 42],
+  ["Glenfiddich 15 0.7 l", 560, 42],
+  ["Glenfiddich 18 0.7 l", 900, 65],
+  ["Highland Park 12 0.7 l", 380, 33],
+  ["The Glenrothes 15 0.7 l", 720, 55],
+  ["Balvenie DoubleWood 12", 700, 52],
+  ["The Macallan Double Cask 12 0.7 l", 550, 44],
+  ["The Macallan Sherry Oak 12", 600, 46],
+  ["The Macallan Double Cask 15 0.7 l", 1000, 75],
+  ["The Macallan Double Cask 18", 1900, 110],
+  ["Nikka Coffee Grain 0.7 l", 480, 35],
+  ["Hibiki Japanese Harmony 0.7 l", 1100, 85],
+]
+
+[[bar.spirits]]
+group = "Cognac / Brandy"
+items = [
+  ["Hennessy VS 0.7 l", 320, 24],
+  ["Hennessy VSOP 0.7 l", 480, 36],
+  ["Hennessy XO 0.7 l", 1350, 97],
+  ["Courvoisier VS 0.7 l", 320, 24],
+  ["Courvoisier VSOP 0.7 l", 450, 33],
+  ["Courvoisier XO 0.7 l", 1290, 93],
+  ["Torres 10 0.7 l", 180, 14],
+  ["Torres 15 0.7 l", 220, 18],
+]
+
+[[bar.spirits]]
+group = "Liqueur"
+items = [
+  ["Baileys 1 l", 280, 19],
+  ["Kahlúa 1 l", 300, 17],
+  ["Sambuca 0.7 l", 220, 19],
+  ["Jägermeister 1 l", 250, 16],
+  ["Cynar 0.7 l", 200, 18],
+  ["Disaronno 1 l", 300, 18],
+  ["Frangelico 0.7 l", 230, 18],
+]
+
+[[bar.spirits]]
+group = "Mix"
+items = [
+  ["Vodka Tonic", 15],
+  ["Vodka Red Bull", 19],
+  ["Jäger Red Bull", 24],
+  ["Jack Honey", 24],
+  ["Jack Apple Tonic", 24],
+  ["Jack Red Bull", 29],
+]
