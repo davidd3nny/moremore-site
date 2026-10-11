@@ -263,6 +263,9 @@ def event_cta(ev, venue, title):
 
 def afisha(af, venue, today):
     cards, dialogs, ids = [], [], set()
+    repeat = af.get("popup_repeat", "always")
+    if repeat not in ("always", "daily"):
+        raise ContentError('content/afisha.toml: popup_repeat может быть "always" (при каждом открытии) или "daily" (раз в день), а сейчас: %s' % repeat)
     for i, ev in enumerate(af.get("event", []), 1):
         where = "content/afisha.toml, событие №%d" % i
         for key in ("id", "from", "to", "image", "title"):
@@ -291,11 +294,11 @@ def afisha(af, venue, today):
                ('<p class="ev-when">%s</p>' % L(when)) if when["az"] else "", L(title),
                ('<p class="ev-text">%s</p>' % L(text)) if text["az"] else "", cta))
         dialogs.append(
-            '<dialog class="promo" id="promo-%s" data-id="%s" %s data-popup="%d" aria-labelledby="promo-t-%s">'
+            '<dialog class="promo" id="promo-%s" data-id="%s" %s data-popup="%d" data-repeat="%s" aria-labelledby="promo-t-%s">'
             '<div class="promo-card" tabindex="-1" autofocus><form method="dialog" class="promo-xf"><button class="promo-x" type="submit"><span class="vh">%s</span><span aria-hidden="true">×</span></button></form>'
             '<div class="promo-pic" style="--bg:url(\'%s\')"><img src="%s" width="%d" height="%d" alt="%s"></div>'
             '<div class="promo-body">%s<h2 id="promo-t-%s">%s</h2>%s<div class="promo-cta">%s</div></div></div></dialog>'
-            % (eid, eid, dates, 1 if ev.get("popup", True) else 0, eid, L(UI["close"]), small, big, bw, bh, esc(title["az"]),
+            % (eid, eid, dates, 1 if ev.get("popup", True) else 0, repeat, eid, L(UI["close"]), small, big, bw, bh, esc(title["az"]),
                ('<p class="promo-when">%s</p>' % L(when)) if when["az"] else "", eid, L(title),
                ('<p class="promo-text">%s</p>' % L(text)) if text["az"] else "", cta))
     if not cards:

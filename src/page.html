@@ -130,7 +130,7 @@
   if(el&&today){el.className='now '+(open?'is-open':'is-closed');d.getElementById('now-h').textContent='· '+today[1]+'–'+today[2];el.hidden=false}
   var row=d.querySelector('.hrs tr[data-day="'+n.d+'"]');if(row)row.className='today';
 
-  /* афиша: показываем только события в своих датах (время Баку); баннер всплывает при входе раз в день */
+  /* афиша: показываем только события в своих датах (время Баку); баннер всплывает при каждом входе или раз в день (popup_repeat) */
   function bakuDate(){
     var m=location.search.match(/[?&]today=(\d{4}-\d\d-\d\d)/);if(m)return m[1];
     try{var p={};new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Baku',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
@@ -149,7 +149,7 @@
   });
   [].forEach.call(d.querySelectorAll('[data-open]'),function(b){b.addEventListener('click',function(){
     var x=d.getElementById('promo-'+b.getAttribute('data-open'));if(x&&x.showModal&&!x.open)x.showModal()})});
-  var first=dlgs.filter(function(x){return x.getAttribute('data-popup')==='1'&&live(x)&&!seen(x.getAttribute('data-id'))})[0];
+  var first=dlgs.filter(function(x){return x.getAttribute('data-popup')==='1'&&live(x)&&(x.getAttribute('data-repeat')!=='daily'||!seen(x.getAttribute('data-id')))})[0];
   if(first&&first.showModal&&!/[?&]nopromo\b/.test(location.search))setTimeout(function(){if(!d.querySelector('dialog[open]'))first.showModal()},700);
 
   /* лента разделов: подсвечиваем текущий и подкручиваем его в центр */
