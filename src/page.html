@@ -142,7 +142,7 @@
   function seen(id){try{return localStorage.getItem('mm-af-'+id)===day}catch(e){return false}}
   var shown=0;
   [].forEach.call(d.querySelectorAll('.ev'),function(c){var on=live(c);c.hidden=!on;if(on)shown++});
-  var af=d.getElementById('afisha');if(af)af.hidden=!shown;
+  var af=d.getElementById('afisha'),evr=d.querySelector('.ev-row');if(af)af.hidden=!shown;if(evr)evr.classList.toggle('one',shown===1);
   dlgs.forEach(function(x){
     x.addEventListener('close',function(){try{localStorage.setItem('mm-af-'+x.getAttribute('data-id'),day)}catch(e){}});
     x.addEventListener('click',function(e){if(e.target===x)x.close()});

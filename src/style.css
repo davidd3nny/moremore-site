@@ -244,17 +244,19 @@ details.grp .list{padding-bottom:12px}
 .afisha{background:var(--foam);padding-bottom:6px}
 .afisha[hidden],.ev[hidden]{display:none}
 .afisha .part-h{padding-top:40px}
-.ev-row{display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,320px);gap:12px;max-width:760px;margin:0 auto;padding:14px 16px 20px;
+.ev-row{display:flex;gap:12px;max-width:760px;margin:0 auto;padding:14px 16px 20px;
   overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;scrollbar-width:none}
 .ev-row::-webkit-scrollbar{display:none}
-.ev{scroll-snap-align:start;display:flex;flex-direction:column;overflow:hidden;border-radius:24px;background:#FFFDFB;border:1px solid var(--line);box-shadow:0 18px 30px -24px rgba(32,57,90,.5)}
+.ev{position:relative;flex:0 0 84%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column;overflow:hidden;border-radius:24px;background:#FFFDFB;border:1px solid var(--line);box-shadow:0 18px 30px -24px rgba(32,57,90,.5)}
+.ev-row.one .ev{flex-basis:100%}
 .ev-pic{display:block;width:100%;aspect-ratio:4/5;padding:0;border:0;overflow:hidden;background:var(--sea);cursor:pointer}
 .ev-pic img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .ev-pic:hover img{transform:scale(1.03)}
-.ev-body{display:flex;flex-direction:column;gap:6px;padding:14px 16px 16px}
+.ev-body{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px}
 .ev-when{color:var(--blue-3);font:700 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;font-variant-numeric:lining-nums}
-.ev h3{font:italic 400 24px/1.1 var(--serif);text-wrap:balance}
-.ev-cta{margin-top:6px}
+.ev h3{font:italic 400 26px/1.1 var(--serif);text-wrap:balance}
+.ev-text{color:var(--muted);font-size:14.5px;line-height:1.5}
+.ev-cta{margin-top:8px}
 .ev-cta .btn,.promo-cta .btn{min-height:44px;padding:0 18px;font-size:14.5px}
 
 /* ---------- всплывающий баннер при входе ---------- */
@@ -279,6 +281,14 @@ details.grp .list{padding-bottom:12px}
 @keyframes pop{from{opacity:0;transform:translateY(18px) scale(.97)}}
 @keyframes fade{from{opacity:0}}
 html:has(dialog[open]){overflow:hidden}
+@media (min-width:640px){
+  .ev-row{flex-direction:column;gap:16px;overflow:visible;scroll-snap-type:none}
+  .ev{flex:none;display:grid;grid-template-columns:minmax(220px,300px) 1fr;align-items:center}
+  .ev-pic{align-self:stretch;height:100%}
+  .ev-body{gap:8px;padding:28px 32px}
+  .ev h3{font-size:34px}
+  .ev-text{font-size:15.5px;max-width:46ch}
+}
 @media (prefers-reduced-motion:reduce){.promo[open],.promo[open]::backdrop{animation:none}}
 .promo-card:focus{outline:none}
 .promo-x:focus{outline:none}

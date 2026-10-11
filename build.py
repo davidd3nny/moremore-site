@@ -286,9 +286,10 @@ def afisha(af, venue, today):
         cards.append(
             '<article class="ev" data-ev="%s" %s%s>'
             '<button class="ev-pic" type="button" data-open="%s"><img src="%s" width="%d" height="%d" alt="%s" loading="lazy"><span class="vh">%s</span></button>'
-            '<div class="ev-body">%s<h3>%s</h3><div class="ev-cta">%s</div></div></article>'
+            '<div class="ev-body">%s<h3>%s</h3>%s<div class="ev-cta">%s</div></div></article>'
             % (eid, dates, hidden, eid, small, sw, sh, esc(title["az"]), L(UI["more"]),
-               ('<p class="ev-when">%s</p>' % L(when)) if when["az"] else "", L(title), cta))
+               ('<p class="ev-when">%s</p>' % L(when)) if when["az"] else "", L(title),
+               ('<p class="ev-text">%s</p>' % L(text)) if text["az"] else "", cta))
         dialogs.append(
             '<dialog class="promo" id="promo-%s" data-id="%s" %s data-popup="%d" aria-labelledby="promo-t-%s">'
             '<div class="promo-card" tabindex="-1" autofocus><form method="dialog" class="promo-xf"><button class="promo-x" type="submit"><span class="vh">%s</span><span aria-hidden="true">×</span></button></form>'
@@ -300,7 +301,7 @@ def afisha(af, venue, today):
     if not cards:
         return "", ""
     section_html = ('<section class="afisha" id="afisha"><div class="wrap"><header class="part-h"><p class="kick">%s</p><h2 class="big">%s</h2></header></div>'
-                    '<div class="ev-row">%s</div></section>') % (L(UI["afKick"]), L(UI["afisha"]), "".join(cards))
+                    '<div class="ev-row%s">%s</div></section>') % (L(UI["afKick"]), L(UI["afisha"]), " one" if len(cards) == 1 else "", "".join(cards))
     return section_html, "".join(dialogs)
 
 
